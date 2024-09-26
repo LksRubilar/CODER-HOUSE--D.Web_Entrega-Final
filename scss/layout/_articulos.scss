@@ -1,0 +1,23 @@
+@use "../utilities/variables" as *;
+@use "../utilities/animations";
+/* ===== ARTICULOS ====*/
+
+.art__cont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  .art__img {
+    grid-column: 1 / 2;
+    .img__art {
+      border-radius: 2rem;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        @extend %imgTransY;
+      }
+    }
+  }
+  .art__info {
+    grid-column: 2 / 3;
+    margin-top: -2rem;
+  }
+}

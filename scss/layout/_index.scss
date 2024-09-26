@@ -1,0 +1,124 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/animations";
+/* === HEADER === */
+.header {
+  background-image: url(../img/banner.jpg);
+  height: 60rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.header__txt {
+  color: $blanco;
+  background-color: $negro;
+  padding-bottom: 2rem;
+  font-size: 6rem;
+  margin-top: 5rem;
+  line-height: 4.5rem;
+}
+.header__p {
+  font-size: 2rem;
+}
+
+.bar {
+  @include responsive-768 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__txt {
+  @include responsive-768 {
+    margin-top: 12rem;
+  }
+}
+
+.bar {
+  padding: 4rem;
+  .logo {
+    color: $blanco;
+    .logo__name {
+      font-weight: normal;
+
+      .logo__span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.nav__a {
+  display: block;
+  font-size: 1.8rem;
+  color: $blanco;
+}
+
+.nav {
+  @include responsive-768 {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.grid-cont {
+  @include responsive-768 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 3rem;
+  }
+}
+
+/* === SECCION ARTICULOS === */
+.txt__sc {
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    @extend %txtScale;
+  }
+}
+.art {
+  border-bottom: 1px solid $gris;
+  margin-bottom: 2rem;
+}
+.art:last-of-type {
+  /*Al ultimo ARTICULO le quitamos la linea porque no hay mas elementos bajo el*/
+  border: none;
+  margin-bottom: 0;
+}
+.blog__img {
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    @extend %imgTransY;
+  }
+}
+
+.cursos {
+  list-style: none;
+  .widget-curso {
+    border-bottom: 1px solid $gris;
+    margin-bottom: 2rem;
+    .widget-curso__label {
+      font-family: $fHeading;
+      font-weight: 700;
+      font-family: 2rem;
+      .widget-curso__span {
+        font-weight: 400;
+      }
+    }
+  }
+}
+.widget-curso:last-of-type {
+  /*permite que al agregar o quitar cursos el ultimo nunca tenga linea ni margen*/
+  border: none;
+  margin-bottom: 0;
+}
+
+/* === FOOTER === */
+
+.footer {
+  background-color: $negro;
+  .bar--ft {
+    padding: 2rem;
+  }
+}

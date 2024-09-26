@@ -1,0 +1,33 @@
+@use "../utilities/variables" as *;
+@use "../utilities/animations";
+/* ===== CONT-CURSOS =====*/
+.header__txt--cc {
+  background-color: $terciario;
+}
+.contcur__cont {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 2rem;
+  .contcur__img {
+    grid-row: 2 / 3;
+    justify-self: center;
+
+    .img__contcur {
+      height: 30rem;
+      border-radius: 2rem;
+      margin-top: -3rem;
+      transition: transform 0.6s ease-in-out;
+      &:hover {
+        @extend %imgRotate;
+      }
+    }
+  }
+
+  .contcur__info {
+    grid-row: 1 / 2;
+    .span__contcur {
+      font-weight: 400;
+    }
+  }
+}

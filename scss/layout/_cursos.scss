@@ -1,0 +1,30 @@
+@use "../utilities/variables" as *;
+@use "../utilities/animations";
+/* ====  CURSOS  ==== */
+.header__txt--cur {
+  background-color: $secundario;
+}
+
+.cursos__cont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+
+  .cursos__info {
+    grid-column: 1 / 2;
+  }
+  .cursos__img {
+    grid-column: 2 / 3;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+
+    .img__jugo {
+      height: 20rem;
+      border-radius: 2rem;
+      transition: transform 0.4s ease-in-out;
+      &:hover {
+        @extend %imgRotate;
+      }
+    }
+  }
+}

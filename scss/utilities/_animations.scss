@@ -1,0 +1,19 @@
+//Imagenes
+%imgTransY {
+  transform: translateY(-2rem);
+  -webkit-box-shadow: 11px 12px 3px -3px rgba(0, 31, 30, 0.69);
+  -moz-box-shadow: 11px 12px 3px -3px rgba(0, 31, 30, 0.69);
+  box-shadow: 11px 12px 3px -3px rgba(0, 31, 30, 0.69);
+}
+
+%imgRotate {
+  transform: rotate(360deg);
+  -webkit-box-shadow: 11px 12px 3px -3px rgba(0, 31, 30, 0.69);
+  -moz-box-shadow: 11px 12px 3px -3px rgba(0, 31, 30, 0.69);
+  box-shadow: 11px 12px 3px -3px rgba(0, 31, 30, 0.69);
+}
+
+//Textos
+%txtScale {
+  transform: scale(1.1);
+}

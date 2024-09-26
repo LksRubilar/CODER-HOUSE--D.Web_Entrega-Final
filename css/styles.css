@@ -94,6 +94,39 @@ html img {
   box-shadow: 11px 12px 3px -3px rgba(0, 31, 30, 0.69);
 }
 
+@keyframes deslizar {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes deslizar--d {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes sacudir {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .us__txt:hover, .txt__sc:hover {
   transform: scale(1.1);
 }
@@ -118,6 +151,14 @@ html img {
 
 .header__p {
   font-size: 2rem;
+}
+
+.txtIzq {
+  animation: deslizar 2s ease-out forwards;
+}
+
+.txtDr {
+  animation: deslizar--d 2s ease-out forwards;
 }
 
 @media (min-width: 768px) {
@@ -169,6 +210,10 @@ html img {
 }
 
 /* === SECCION ARTICULOS === */
+.txt__kf:hover {
+  animation: sacudir 0.5s ease-in-out;
+}
+
 .txt__sc {
   transition: transform 0.3s ease-in-out;
 }

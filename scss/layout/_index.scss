@@ -21,6 +21,13 @@
   font-size: 2rem;
 }
 
+.txtIzq {
+  animation: deslizar 2s ease-out forwards;
+}
+.txtDr {
+  animation: deslizar--d 2s ease-out forwards;
+}
+
 .bar {
   @include responsive-768 {
     display: flex;
@@ -71,6 +78,11 @@
 }
 
 /* === SECCION ARTICULOS === */
+.txt__kf {
+  &:hover {
+    animation: sacudir 0.5s ease-in-out;
+  }
+}
 .txt__sc {
   transition: transform 0.3s ease-in-out;
   &:hover {
